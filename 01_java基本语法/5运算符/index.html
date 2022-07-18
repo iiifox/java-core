@@ -12,20 +12,20 @@
     <title>5、运算符 :: Java 核心技术</title>
 
     
-    <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/fontawesome-all.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hybrid.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/featherlight.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/perfect-scrollbar.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/auto-complete.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/atom-one-dark-reasonable.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/theme.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/tabs.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hugo-theme.css?1658140812" rel="stylesheet">
+    <link href="/java-core/css/nucleus.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/fontawesome-all.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hybrid.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/featherlight.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/perfect-scrollbar.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/auto-complete.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/atom-one-dark-reasonable.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/theme.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/tabs.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hugo-theme.css?1658150505" rel="stylesheet">
     
     
 
-    <script src="/java-core/js/jquery-3.3.1.min.js?1658140812"></script>
+    <script src="/java-core/js/jquery-3.3.1.min.js?1658150505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/java-core/js/lunr.min.js?1658140812"></script>
-<script type="text/javascript" src="/java-core/js/auto-complete.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/lunr.min.js?1658150505"></script>
+<script type="text/javascript" src="/java-core/js/auto-complete.js?1658150505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/iiifox.github.io\/java-core\/";
     
 </script>
-<script type="text/javascript" src="/java-core/js/search.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/search.js?1658150505"></script>
 
     
   </div>
@@ -982,12 +982,16 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#算术运算符">算术运算符</a></li>
-    <li><a href="#赋值运算符">赋值运算符</a></li>
-    <li><a href="#比较运算符">比较运算符</a></li>
-    <li><a href="#逻辑运算符">逻辑运算符</a></li>
-    <li><a href="#位运算符">位运算符</a></li>
-    <li><a href="#三元运算符">三元运算符</a></li>
+    <li>
+      <ul>
+        <li><a href="#算术运算符">算术运算符</a></li>
+        <li><a href="#赋值运算符">赋值运算符</a></li>
+        <li><a href="#比较运算符">比较运算符</a></li>
+        <li><a href="#逻辑运算符">逻辑运算符</a></li>
+        <li><a href="#位运算符">位运算符</a></li>
+        <li><a href="#三元运算符">三元运算符</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1021,7 +1025,7 @@
 <li>位运算符</li>
 <li>三元运算符</li>
 </ul>
-<h2 id="算术运算符">算术运算符</h2>
+<h3 id="算术运算符">算术运算符</h3>
 <table>
 <thead>
 <tr>
@@ -1128,7 +1132,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> b <span style="color:#f92672">=</span> 127<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>b<span style="color:#f92672">++;</span>
 </span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>b<span style="color:#f92672">);</span> <span style="color:#75715e">//-128
-</span></span></span></code></pre></div><h2 id="赋值运算符">赋值运算符</h2>
+</span></span></span></code></pre></div><h3 id="赋值运算符">赋值运算符</h3>
 <p>符号：<code>=</code> 拓展赋值运算符：<code>+=</code>,<code>-=</code>,<code>*=</code>,<code>/=</code>,<code>%=</code></p>
 <ul>
 <li>当<code>=</code>两侧数据类型不一致时，可以使用自动类型转换或使用强制类型转换原则进行处理</li>
@@ -1145,7 +1149,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>i <span style="color:#f92672">*=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// 0
-</span></span></span></code></pre></div><h2 id="比较运算符">比较运算符</h2>
+</span></span></span></code></pre></div><h3 id="比较运算符">比较运算符</h3>
 <table>
 <thead>
 <tr>
@@ -1206,7 +1210,7 @@
 <li><code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>&lt;=</code>：只能使用在数值类型的数据之间</li>
 <li><code>==</code>：不仅可以使用在数值类型数据之间，还可以使用在其他引用类型变量之间。</li>
 </ul>
-<h2 id="逻辑运算符">逻辑运算符</h2>
+<h3 id="逻辑运算符">逻辑运算符</h3>
 <p><code>&amp;</code>-逻辑与
 <code>|</code>-逻辑或
 <code>!</code>-逻辑非
@@ -1281,7 +1285,7 @@
 <li>相同点2：当符号左边是false时，二者都会执行符号右边的运算</li>
 <li>不同点1：当符号左边是true时，|继续执行符号右边的运算，而||不再执行符号右边的运算</li>
 </ul>
-<h2 id="位运算符">位运算符</h2>
+<h3 id="位运算符">位运算符</h3>
 <table>
 <thead>
 <tr>
@@ -1372,7 +1376,7 @@
 <blockquote>
 <p>m = k ^ n = (m ^ n) ^ n</p>
 </blockquote>
-<h2 id="三元运算符">三元运算符</h2>
+<h3 id="三元运算符">三元运算符</h3>
 <ul>
 <li>格式：(条件表达式) ? 表达式1 : 表达式2;</li>
 <li>表达式1和表达式2为同种类型</li>
@@ -2076,16 +2080,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/java-core/js/clipboard.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658140812"></script>
-    <script src="/java-core/js/jquery.sticky.js?1658140812"></script>
-    <script src="/java-core/js/featherlight.min.js?1658140812"></script>
-    <script src="/java-core/js/highlight.pack.js?1658140812"></script>
+    <script src="/java-core/js/clipboard.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658150505"></script>
+    <script src="/java-core/js/jquery.sticky.js?1658150505"></script>
+    <script src="/java-core/js/featherlight.min.js?1658150505"></script>
+    <script src="/java-core/js/highlight.pack.js?1658150505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658140812"></script>
-    <script src="/java-core/js/learn.js?1658140812"></script>
-    <script src="/java-core/js/hugo-learn.js?1658140812"></script>
+    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658150505"></script>
+    <script src="/java-core/js/learn.js?1658150505"></script>
+    <script src="/java-core/js/hugo-learn.js?1658150505"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

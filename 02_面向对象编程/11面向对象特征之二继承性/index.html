@@ -12,20 +12,20 @@
     <title>11、面向对象特征之二：继承性 :: Java 核心技术</title>
 
     
-    <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/fontawesome-all.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hybrid.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/featherlight.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/perfect-scrollbar.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/auto-complete.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/atom-one-dark-reasonable.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/theme.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/tabs.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hugo-theme.css?1658140812" rel="stylesheet">
+    <link href="/java-core/css/nucleus.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/fontawesome-all.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hybrid.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/featherlight.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/perfect-scrollbar.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/auto-complete.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/atom-one-dark-reasonable.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/theme.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/tabs.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hugo-theme.css?1658150505" rel="stylesheet">
     
     
 
-    <script src="/java-core/js/jquery-3.3.1.min.js?1658140812"></script>
+    <script src="/java-core/js/jquery-3.3.1.min.js?1658150505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/java-core/js/lunr.min.js?1658140812"></script>
-<script type="text/javascript" src="/java-core/js/auto-complete.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/lunr.min.js?1658150505"></script>
+<script type="text/javascript" src="/java-core/js/auto-complete.js?1658150505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/iiifox.github.io\/java-core\/";
     
 </script>
-<script type="text/javascript" src="/java-core/js/search.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/search.js?1658150505"></script>
 
     
   </div>
@@ -982,10 +982,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#继承性的好处">继承性的好处</a></li>
-    <li><a href="#继承性的说明">继承性的说明</a></li>
-    <li><a href="#java中关于继承性的规定">Java中关于继承性的规定</a></li>
-    <li><a href="#方法的重写overrideoverwrite">方法的重写(override/overwrite)</a></li>
+    <li>
+      <ul>
+        <li><a href="#继承性的好处">继承性的好处</a></li>
+        <li><a href="#继承性的说明">继承性的说明</a></li>
+        <li><a href="#java中关于继承性的规定">Java中关于继承性的规定</a></li>
+        <li><a href="#方法的重写overrideoverwrite">方法的重写(override/overwrite)</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1010,19 +1014,19 @@
         
 
 
-<h2 id="继承性的好处">继承性的好处</h2>
+<h3 id="继承性的好处">继承性的好处</h3>
 <ul>
 <li>减少了代码的冗余，提高了代码的复用性</li>
 <li>便于功能的拓展</li>
 <li>为之后多态性的使用，提供了前提</li>
 </ul>
-<h2 id="继承性的说明">继承性的说明</h2>
+<h3 id="继承性的说明">继承性的说明</h3>
 <ul>
 <li>继承性的格式： class A extends B{}</li>
 <li>体现：一旦子类A继承父类B以后，子类A中就获取了父类B中的声明的所有的属性和方法。特别的，父类中声明为private的属性或方法，子类继承父类以后，仍然认为获取了父类中的私有的结构。只是因为封装性的影响，使得子类不能直接调用父类的结构而已。</li>
 <li>子类继承父类以后，还可以声明自己特有的属性或方法：实现功能的拓展</li>
 </ul>
-<h2 id="java中关于继承性的规定">Java中关于继承性的规定</h2>
+<h3 id="java中关于继承性的规定">Java中关于继承性的规定</h3>
 <ul>
 <li>一个类可以被多个子类继承</li>
 <li>Java中类的单继承性：一个类只能有一个父类</li>
@@ -1036,7 +1040,7 @@
 <li>所有的java类（除java.lang.Object类之外）都直接或间接的继承于java.lang.Object类</li>
 <li>意味着，所有的java类都具有java.lang.Object类声明的功能。</li>
 </ul>
-<h2 id="方法的重写overrideoverwrite">方法的重写(override/overwrite)</h2>
+<h3 id="方法的重写overrideoverwrite">方法的重写(override/overwrite)</h3>
 <ul>
 <li>重写：子类继承父类以后，可以对父类中同名同参数的方法，进行覆盖操作</li>
 <li>应用：重写以后，当创建子类对象以后，通过子类对象调用子父类中的同名同参数的方法时，实际执行的是子类重写父类的方法</li>
@@ -1685,16 +1689,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/java-core/js/clipboard.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658140812"></script>
-    <script src="/java-core/js/jquery.sticky.js?1658140812"></script>
-    <script src="/java-core/js/featherlight.min.js?1658140812"></script>
-    <script src="/java-core/js/highlight.pack.js?1658140812"></script>
+    <script src="/java-core/js/clipboard.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658150505"></script>
+    <script src="/java-core/js/jquery.sticky.js?1658150505"></script>
+    <script src="/java-core/js/featherlight.min.js?1658150505"></script>
+    <script src="/java-core/js/highlight.pack.js?1658150505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658140812"></script>
-    <script src="/java-core/js/learn.js?1658140812"></script>
-    <script src="/java-core/js/hugo-learn.js?1658140812"></script>
+    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658150505"></script>
+    <script src="/java-core/js/learn.js?1658150505"></script>
+    <script src="/java-core/js/hugo-learn.js?1658150505"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -12,20 +12,20 @@
     <title>2、Java语言基本元素：类和对象 :: Java 核心技术</title>
 
     
-    <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/fontawesome-all.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hybrid.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/featherlight.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/perfect-scrollbar.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/auto-complete.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/atom-one-dark-reasonable.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/theme.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/tabs.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hugo-theme.css?1658140812" rel="stylesheet">
+    <link href="/java-core/css/nucleus.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/fontawesome-all.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hybrid.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/featherlight.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/perfect-scrollbar.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/auto-complete.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/atom-one-dark-reasonable.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/theme.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/tabs.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hugo-theme.css?1658150505" rel="stylesheet">
     
     
 
-    <script src="/java-core/js/jquery-3.3.1.min.js?1658140812"></script>
+    <script src="/java-core/js/jquery-3.3.1.min.js?1658150505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/java-core/js/lunr.min.js?1658140812"></script>
-<script type="text/javascript" src="/java-core/js/auto-complete.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/lunr.min.js?1658150505"></script>
+<script type="text/javascript" src="/java-core/js/auto-complete.js?1658150505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/iiifox.github.io\/java-core\/";
     
 </script>
-<script type="text/javascript" src="/java-core/js/search.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/search.js?1658150505"></script>
 
     
   </div>
@@ -982,9 +982,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#类和对象">类和对象</a></li>
-    <li><a href="#类和对象的使用面向对象思想落地的实现">类和对象的使用（面向对象思想落地的实现）</a></li>
-    <li><a href="#对象的创建和使用内存解析">对象的创建和使用：内存解析</a></li>
+    <li>
+      <ul>
+        <li><a href="#类和对象">类和对象</a></li>
+        <li><a href="#类和对象的使用面向对象思想落地的实现">类和对象的使用（面向对象思想落地的实现）</a></li>
+        <li><a href="#对象的创建和使用内存解析">对象的创建和使用：内存解析</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1009,7 +1013,7 @@
         
 
 
-<h2 id="类和对象">类和对象</h2>
+<h3 id="类和对象">类和对象</h3>
 <ul>
 <li>类(Class)和对象(Object)是面向对象的核心概念。
 <ul>
@@ -1018,7 +1022,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="类和对象的使用面向对象思想落地的实现">类和对象的使用（面向对象思想落地的实现）</h2>
+<h3 id="类和对象的使用面向对象思想落地的实现">类和对象的使用（面向对象思想落地的实现）</h3>
 <ul>
 <li>创建类，设计类的成员</li>
 <li>创建类的对象</li>
@@ -1027,7 +1031,7 @@
 <blockquote>
 <p>如果创建了一个类的多个对象，则每个对象都独立的拥有一套类的(非static的)属性。意味着：如果我们修改一个对象的属性a，则不影响另外一个对象属性a的值。</p>
 </blockquote>
-<h2 id="对象的创建和使用内存解析">对象的创建和使用：内存解析</h2>
+<h3 id="对象的创建和使用内存解析">对象的创建和使用：内存解析</h3>
 <ul>
 <li><strong>堆(Heap)</strong>，此内存区域的唯一目的就是 <strong>存放对象实例</strong>，几乎所有的对象实例都在这里分配内存。这一点在Java虚拟机规范中的描述是：所有的对象实例以及数组都要在堆上分配。</li>
 <li>通常所说的 <strong>栈(Stack)</strong>，是指虚拟机栈。虚拟机栈用于 <strong>存储局部变量</strong> 等。局部变量表存放了编译期可知长度的各种基本数据类型(boolean、byte、char、short、int、float、long、double)、对象引用(reference类型，它不等同于对象本身，是对象在堆内存的首地址)。方法执行完，自动释放。</li>
@@ -1658,16 +1662,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/java-core/js/clipboard.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658140812"></script>
-    <script src="/java-core/js/jquery.sticky.js?1658140812"></script>
-    <script src="/java-core/js/featherlight.min.js?1658140812"></script>
-    <script src="/java-core/js/highlight.pack.js?1658140812"></script>
+    <script src="/java-core/js/clipboard.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658150505"></script>
+    <script src="/java-core/js/jquery.sticky.js?1658150505"></script>
+    <script src="/java-core/js/featherlight.min.js?1658150505"></script>
+    <script src="/java-core/js/highlight.pack.js?1658150505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658140812"></script>
-    <script src="/java-core/js/learn.js?1658140812"></script>
-    <script src="/java-core/js/hugo-learn.js?1658140812"></script>
+    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658150505"></script>
+    <script src="/java-core/js/learn.js?1658150505"></script>
+    <script src="/java-core/js/hugo-learn.js?1658150505"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

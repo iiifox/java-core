@@ -12,20 +12,20 @@
     <title>4、类的成员之二：方法 :: Java 核心技术</title>
 
     
-    <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/fontawesome-all.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hybrid.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/featherlight.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/perfect-scrollbar.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/auto-complete.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/atom-one-dark-reasonable.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/theme.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/tabs.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hugo-theme.css?1658140812" rel="stylesheet">
+    <link href="/java-core/css/nucleus.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/fontawesome-all.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hybrid.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/featherlight.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/perfect-scrollbar.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/auto-complete.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/atom-one-dark-reasonable.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/theme.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/tabs.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hugo-theme.css?1658150505" rel="stylesheet">
     
     
 
-    <script src="/java-core/js/jquery-3.3.1.min.js?1658140812"></script>
+    <script src="/java-core/js/jquery-3.3.1.min.js?1658150505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/java-core/js/lunr.min.js?1658140812"></script>
-<script type="text/javascript" src="/java-core/js/auto-complete.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/lunr.min.js?1658150505"></script>
+<script type="text/javascript" src="/java-core/js/auto-complete.js?1658150505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/iiifox.github.io\/java-core\/";
     
 </script>
-<script type="text/javascript" src="/java-core/js/search.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/search.js?1658150505"></script>
 
     
   </div>
@@ -982,14 +982,18 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#方法的声明">方法的声明</a></li>
-    <li><a href="#返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</a></li>
-    <li><a href="#return-关键字的使用">return 关键字的使用</a></li>
-    <li><a href="#方法的使用">方法的使用</a></li>
-    <li><a href="#理解万事万物皆对象">理解“万事万物皆对象”</a></li>
-    <li><a href="#方法的重载overload">方法的重载(overload)</a></li>
-    <li><a href="#可变个数的形参">可变个数的形参</a></li>
-    <li><a href="#方法参数的值传递机制">方法参数的值传递机制</a></li>
+    <li>
+      <ul>
+        <li><a href="#方法的声明">方法的声明</a></li>
+        <li><a href="#返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</a></li>
+        <li><a href="#return-关键字的使用">return 关键字的使用</a></li>
+        <li><a href="#方法的使用">方法的使用</a></li>
+        <li><a href="#理解万事万物皆对象">理解“万事万物皆对象”</a></li>
+        <li><a href="#方法的重载overload">方法的重载(overload)</a></li>
+        <li><a href="#可变个数的形参">可变个数的形参</a></li>
+        <li><a href="#方法参数的值传递机制">方法参数的值传递机制</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1014,28 +1018,28 @@
         
 
 
-<h2 id="方法的声明">方法的声明</h2>
+<h3 id="方法的声明">方法的声明</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>权限修饰符 返回值类型 <span style="color:#a6e22e">方法名</span><span style="color:#f92672">(</span>形参列表<span style="color:#f92672">){</span>
 </span></span><span style="display:flex;"><span>  方法体
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 注意：static、final、abstract来修饰的方法，后面再讲
-</span></span></span></code></pre></div><h2 id="返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</h2>
+</span></span></span></code></pre></div><h3 id="返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</h3>
 <ul>
 <li>如果方法有返回值，则必须在方法声明时，指定返回值的类型。同时，方法中，需要使用return关键字来返回指定类型的变量或常量：“return 数据”。</li>
 <li>如果方法没有返回值，则方法声明时，使用void来表示。通常，没有返回值的方法中，就不需要使用return。但是，如果使用的话，只能“return;”表示结束此方法的意思。</li>
 </ul>
-<h2 id="return-关键字的使用">return 关键字的使用</h2>
+<h3 id="return-关键字的使用">return 关键字的使用</h3>
 <ul>
 <li>使用范围：使用在方法体中</li>
 <li>作用：1、结束方法；2、针对于有返回值类型的方法，使用&quot;return 数据&quot;方法返回所要的数据。</li>
 <li>注意点：return关键字后面不可以声明执行语句。</li>
 </ul>
-<h2 id="方法的使用">方法的使用</h2>
+<h3 id="方法的使用">方法的使用</h3>
 <ul>
 <li>方法的使用中，可以调用当前类的属性或方法。特殊的，方法A中又调用了方法A：递归方法</li>
 <li>方法中不可以定义方法。</li>
 </ul>
-<h2 id="理解万事万物皆对象">理解“万事万物皆对象”</h2>
+<h3 id="理解万事万物皆对象">理解“万事万物皆对象”</h3>
 <ul>
 <li>在Java语言范畴中，我们都将功能、结构等封装到类中，通过类的实例化，来调用具体的功能接口
 <ul>
@@ -1046,7 +1050,7 @@
 </li>
 <li>涉及到Java与前端Html、后端的数据库交互时，前后端的结构在Java层面交互时，都体现为类和对象。</li>
 </ul>
-<h2 id="方法的重载overload">方法的重载(overload)</h2>
+<h3 id="方法的重载overload">方法的重载(overload)</h3>
 <ul>
 <li>重载的概念：在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</li>
 <li>重载的特点：与返回值类型无关，只看参数列表，且参数列表必须不同（参数个数或参数类型）。调用时，根据方法参数列表的不同来区分。</li>
@@ -1057,7 +1061,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> z<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">+</span>y<span style="color:#f92672">+</span>z<span style="color:#f92672">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 返回两个小数的和
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">+</span>y<span style="color:#f92672">;}</span>
-</span></span></code></pre></div><h2 id="可变个数的形参">可变个数的形参</h2>
+</span></span></code></pre></div><h3 id="可变个数的形参">可变个数的形参</h3>
 <blockquote>
 <p>JavaSE 5.0中提供了Varargs(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可以变的实参。</p>
 </blockquote>
@@ -1093,7 +1097,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>String <span style="color:#f92672">...</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;show(String ... s)&#34;</span><span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="方法参数的值传递机制">方法参数的值传递机制</h2>
+</span></span></code></pre></div><h3 id="方法参数的值传递机制">方法参数的值传递机制</h3>
 <p><strong>Java的实参值如何传入方法呢？</strong></p>
 <ul>
 <li>Java里方法的参数传递方式只有一种：值传递。即将实际参数值的副本(复制品)传入方法内，而参数本身不受影响。
@@ -1733,16 +1737,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/java-core/js/clipboard.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658140812"></script>
-    <script src="/java-core/js/jquery.sticky.js?1658140812"></script>
-    <script src="/java-core/js/featherlight.min.js?1658140812"></script>
-    <script src="/java-core/js/highlight.pack.js?1658140812"></script>
+    <script src="/java-core/js/clipboard.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658150505"></script>
+    <script src="/java-core/js/jquery.sticky.js?1658150505"></script>
+    <script src="/java-core/js/featherlight.min.js?1658150505"></script>
+    <script src="/java-core/js/highlight.pack.js?1658150505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658140812"></script>
-    <script src="/java-core/js/learn.js?1658140812"></script>
-    <script src="/java-core/js/hugo-learn.js?1658140812"></script>
+    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658150505"></script>
+    <script src="/java-core/js/learn.js?1658150505"></script>
+    <script src="/java-core/js/hugo-learn.js?1658150505"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

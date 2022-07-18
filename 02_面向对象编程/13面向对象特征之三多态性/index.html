@@ -12,20 +12,20 @@
     <title>13、面向对象特征之三：多态性 :: Java 核心技术</title>
 
     
-    <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/fontawesome-all.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hybrid.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/featherlight.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/perfect-scrollbar.min.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/auto-complete.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/atom-one-dark-reasonable.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/theme.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/tabs.css?1658140812" rel="stylesheet">
-    <link href="/java-core/css/hugo-theme.css?1658140812" rel="stylesheet">
+    <link href="/java-core/css/nucleus.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/fontawesome-all.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hybrid.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/featherlight.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/perfect-scrollbar.min.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/auto-complete.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/atom-one-dark-reasonable.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/theme.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/tabs.css?1658150505" rel="stylesheet">
+    <link href="/java-core/css/hugo-theme.css?1658150505" rel="stylesheet">
     
     
 
-    <script src="/java-core/js/jquery-3.3.1.min.js?1658140812"></script>
+    <script src="/java-core/js/jquery-3.3.1.min.js?1658150505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -91,14 +91,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/java-core/js/lunr.min.js?1658140812"></script>
-<script type="text/javascript" src="/java-core/js/auto-complete.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/lunr.min.js?1658150505"></script>
+<script type="text/javascript" src="/java-core/js/auto-complete.js?1658150505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/iiifox.github.io\/java-core\/";
     
 </script>
-<script type="text/javascript" src="/java-core/js/search.js?1658140812"></script>
+<script type="text/javascript" src="/java-core/js/search.js?1658150505"></script>
 
     
   </div>
@@ -982,10 +982,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#区分方法的重载与重写">区分方法的重载与重写</a></li>
-    <li><a href="#instanceof-操作符">instanceof 操作符</a></li>
-    <li><a href="#和equals的区别">==和equals的区别</a></li>
-    <li><a href="#java中的junit单元测试">Java中的JUnit单元测试</a></li>
+    <li>
+      <ul>
+        <li><a href="#区分方法的重载与重写">区分方法的重载与重写</a></li>
+        <li><a href="#instanceof-操作符">instanceof 操作符</a></li>
+        <li><a href="#和equals的区别">==和equals的区别</a></li>
+        <li><a href="#java中的junit单元测试">Java中的JUnit单元测试</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1031,7 +1035,7 @@
 </li>
 <li>对象的多态性，只适用于方法，不适用于属性（编译和运行都看左边）</li>
 </ul>
-<h2 id="区分方法的重载与重写">区分方法的重载与重写</h2>
+<h3 id="区分方法的重载与重写">区分方法的重载与重写</h3>
 <ul>
 <li>二者定义的不同：
 <ul>
@@ -1047,20 +1051,20 @@
 </ul>
 </li>
 </ul>
-<h2 id="instanceof-操作符">instanceof 操作符</h2>
+<h3 id="instanceof-操作符">instanceof 操作符</h3>
 <ul>
 <li>instanceof 关键字的使用：a instanceof A：判断对象a是否是类A的实例。如果是，返回true；如果不是，返回false</li>
 <li>使用情境： 为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，就不进行向下转型。</li>
 <li>如果类B是类A的父类，且a instanceof A返回true，则a instanceof B也返回true</li>
 </ul>
-<h2 id="和equals的区别">==和equals的区别</h2>
+<h3 id="和equals的区别">==和equals的区别</h3>
 <ul>
 <li>==既可以比较基本类型也可以比较引用类型。对于基本类型就是比较值，对于引用类型就是比较内存地址</li>
 <li>equals的话，它是属于java.lang.Object类里面的方法，如果该方法没有被重写过默认也是==；我们可以看到String等类的equals方法是被重写过的，而且String类在日常开发中用的比较多，久而久之，形成了equals是比较值的错误观点</li>
 <li>具体要看自定义类里有没有重写Object的equals方法来判断</li>
 <li>通常情况下，重写equals方法，会比较类中的相应属性是否都相等</li>
 </ul>
-<h2 id="java中的junit单元测试">Java中的JUnit单元测试</h2>
+<h3 id="java中的junit单元测试">Java中的JUnit单元测试</h3>
 <ul>
 <li>创建Java类，进行单元测试。此时的Java类要求：
 <ul>
@@ -1698,16 +1702,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/java-core/js/clipboard.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.min.js?1658140812"></script>
-    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658140812"></script>
-    <script src="/java-core/js/jquery.sticky.js?1658140812"></script>
-    <script src="/java-core/js/featherlight.min.js?1658140812"></script>
-    <script src="/java-core/js/highlight.pack.js?1658140812"></script>
+    <script src="/java-core/js/clipboard.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.min.js?1658150505"></script>
+    <script src="/java-core/js/perfect-scrollbar.jquery.min.js?1658150505"></script>
+    <script src="/java-core/js/jquery.sticky.js?1658150505"></script>
+    <script src="/java-core/js/featherlight.min.js?1658150505"></script>
+    <script src="/java-core/js/highlight.pack.js?1658150505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658140812"></script>
-    <script src="/java-core/js/learn.js?1658140812"></script>
-    <script src="/java-core/js/hugo-learn.js?1658140812"></script>
+    <script src="/java-core/js/modernizr.custom-3.6.0.js?1658150505"></script>
+    <script src="/java-core/js/learn.js?1658150505"></script>
+    <script src="/java-core/js/hugo-learn.js?1658150505"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
