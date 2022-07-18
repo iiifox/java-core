@@ -105,6 +105,13 @@
 	"content": " 所有数字在计算机底层都是以二进制形式存在。 对于整数，有四种表示方式： 二进制(binary)：0,1，满2进1，以0b或0B开头 十进制(decimal)：0-9，满10进1 八进制(octal)：0-7，满8进1，以数字0开头表示 十六进制(hex)：0-9及A-F，满16进1，以0x或0X开头表示。此处的A-F不区分大小写。 Java 整数常量默认是 int 类型，当用二进制定义整数时，其第 32 位(最高位)是符号位：当是 long 类型时，二进制默认占64位，第64位是符号位 二进制的整数有如下三种形式： 原码：直接将一个数值换成二进制数。最高位是符号位 负数的反码：是对原码按位取反，只有最高位(符号位)确认为1 负数的补码：其反码加1 计算机以二进制 补码 的形式保持所有的整数 正数的原码、反码、补码都相同 负数的补码是其反码+1 "
 },
 {
+	"uri": "https://iiifox.github.io/java-core/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 0 Java 核心技术笔记 田章\n我的博客网站：https://iiifox.github.io/ LeetCode 热题 Hot 100：https://iiifox.github.io/leetcode-hot100/ "
+},
+{
 	"uri": "https://iiifox.github.io/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/",
 	"title": "5、面向对象特征之一：封装性",
 	"tags": [],
@@ -243,13 +250,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Java中允许将一个类A声明在另一个类B中，则类A就是内部类，类B称为外部类\n内部类的分类：成员内部类（静态、非静态） VS 局部内部类（方法内、代码块内、构造器内）\n成员内部类：\n作为外部类的成员： 调用外部类的结构 可以被static修饰 可以被4种不同的权限修饰 作为一个类： 类内可以定义属性、方法、构造器等 可以被final修饰，表示此类不能被继承。言外之意，不使用final就可以被继承 可以被abstract修饰 如何实例化成员内部类的对象\n// 创建Dog实例（静态的成员内部类）： Person.Dog dog = new Person.Dog(); dog.show(); // 创建Bird实例（非静态的成员内部类）： // Person.Bird bird = new Person.Bird(); // 编译错误 Person p = new Person(); Person.Bird bird = p.new Bird(); bird.sing(); 如何在成员内部类中区分调用外部类的结构 public void sing() { // 调用外部类的非静态方法 Person.this.eat(); eat(); // 调用外部类的非静态属性 System.out.println(age); } public void display(String name) { System.out.println(name); // 方法的形参 System.out.println(this.name); // 内部类的属性 System.out.println(Person.this.name); // 外部类的属性 } 开发中局部内部类的使用 public Comparable getComparable() { return new Comparable() { @Override public int compareTo(Object o) { return 0; } } } 在局部内部类的方法中(比如：show)，如果要调用外部类所声明的方法(比如：method)中的局部变量(比如：num)的话，要求此局部变量声明为final的。 JDK 7及之前版本：要求此局部变量显式的声明为final的 JDK 8及之后版本：可以省略final的声明 public void method() { //局部变量-JDK 8及之后，final可以省略 final int num = 10; class AA { public void show () { // num = 20; System.out.print(num); } } } 成员内部类和局部内部类，在编译之后，都会生成字节码文件。格式： 成员内部类：外部类$内部类名.class 局部内部类：外部类$数字 内部类名.class "
-},
-{
-	"uri": "https://iiifox.github.io/java-core/",
-	"title": "Java 核心技术",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://iiifox.github.io/java-core/categories/",
