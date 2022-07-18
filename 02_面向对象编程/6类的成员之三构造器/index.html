@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>6、类的成员之三：构造器 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -455,7 +455,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/" title="6、类的成员之三：构造器" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/" title="6、类的成员之三：构造器" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">
         6、类的成员之三：构造器
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,20 @@
                   <span class="links">
                  
                  
-                   Categories
+                   6、类的成员之三：构造器
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#构造器的作用">构造器的作用</a></li>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#属性赋值的过程">属性赋值的过程</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1002,36 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              6、类的成员之三：构造器
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="构造器的作用">构造器的作用</h2>
 <ul>
-	
+<li>创建对象</li>
+<li>初始化对象的信息</li>
+</ul>
+<h2 id="说明">说明</h2>
+<ul>
+<li>如果没有显示的定义类的构造器的话，则系统默认提供一个空参的构造器，默认构造器的权限修饰符与类修饰符一致</li>
+<li>定义构造器的格式：权限修饰符 类名(形参列表){}</li>
+<li>一个类中定义的多个构造器，彼此构成重载</li>
+<li>一旦我们显式的定义了类的构造器之后，系统就不再提供默认的空参构造器</li>
+<li>一个类中，至少会有一个构造器</li>
+</ul>
+<h2 id="属性赋值的过程">属性赋值的过程</h2>
+<ul>
+<li>默认初始化</li>
+<li>显式初始化</li>
+<li>构造器中的初始化</li>
+<li>通过“对象.属性”或“对象.方法”的方式赋值</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1213,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1226,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1288,6 +1310,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1303,6 +1326,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1641,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" title="5、面向对象特征之一：封装性"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/7%E6%8B%93%E5%B1%95%E7%9F%A5%E8%AF%86/" title="7、拓展知识" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1684,4 @@
 </script>
   </body>
 </html>
+

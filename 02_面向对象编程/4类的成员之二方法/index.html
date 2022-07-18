@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>4、类的成员之二：方法 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -413,7 +413,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/" title="4、类的成员之二：方法" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/" title="4、类的成员之二：方法" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">
         4、类的成员之二：方法
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,25 @@
                   <span class="links">
                  
                  
-                   Categories
+                   4、类的成员之二：方法
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#方法的声明">方法的声明</a></li>
+    <li><a href="#返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</a></li>
+    <li><a href="#return-关键字的使用">return 关键字的使用</a></li>
+    <li><a href="#方法的使用">方法的使用</a></li>
+    <li><a href="#理解万事万物皆对象">理解“万事万物皆对象”</a></li>
+    <li><a href="#方法的重载overload">方法的重载(overload)</a></li>
+    <li><a href="#可变个数的形参">可变个数的形参</a></li>
+    <li><a href="#方法参数的值传递机制">方法参数的值传递机制</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1007,110 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              4、类的成员之二：方法
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="方法的声明">方法的声明</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>权限修饰符 返回值类型 <span style="color:#a6e22e">方法名</span><span style="color:#f92672">(</span>形参列表<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>  方法体
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 注意：static、final、abstract来修饰的方法，后面再讲
+</span></span></span></code></pre></div><h2 id="返回值类型有返回值-vs-没有返回值">返回值类型：有返回值 VS 没有返回值</h2>
 <ul>
-	
+<li>如果方法有返回值，则必须在方法声明时，指定返回值的类型。同时，方法中，需要使用return关键字来返回指定类型的变量或常量：“return 数据”。</li>
+<li>如果方法没有返回值，则方法声明时，使用void来表示。通常，没有返回值的方法中，就不需要使用return。但是，如果使用的话，只能“return;”表示结束此方法的意思。</li>
 </ul>
+<h2 id="return-关键字的使用">return 关键字的使用</h2>
+<ul>
+<li>使用范围：使用在方法体中</li>
+<li>作用：1、结束方法；2、针对于有返回值类型的方法，使用&quot;return 数据&quot;方法返回所要的数据。</li>
+<li>注意点：return关键字后面不可以声明执行语句。</li>
+</ul>
+<h2 id="方法的使用">方法的使用</h2>
+<ul>
+<li>方法的使用中，可以调用当前类的属性或方法。特殊的，方法A中又调用了方法A：递归方法</li>
+<li>方法中不可以定义方法。</li>
+</ul>
+<h2 id="理解万事万物皆对象">理解“万事万物皆对象”</h2>
+<ul>
+<li>在Java语言范畴中，我们都将功能、结构等封装到类中，通过类的实例化，来调用具体的功能接口
+<ul>
+<li>Scanner, String等</li>
+<li>文件：File</li>
+<li>网络资源：URL</li>
+</ul>
+</li>
+<li>涉及到Java与前端Html、后端的数据库交互时，前后端的结构在Java层面交互时，都体现为类和对象。</li>
+</ul>
+<h2 id="方法的重载overload">方法的重载(overload)</h2>
+<ul>
+<li>重载的概念：在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</li>
+<li>重载的特点：与返回值类型无关，只看参数列表，且参数列表必须不同（参数个数或参数类型）。调用时，根据方法参数列表的不同来区分。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#75715e">// 返回两个整数的和
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">+</span>y<span style="color:#f92672">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 返回三个整数的和
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> z<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">+</span>y<span style="color:#f92672">+</span>z<span style="color:#f92672">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 返回两个小数的和
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">double</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">double</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> x<span style="color:#f92672">+</span>y<span style="color:#f92672">;}</span>
+</span></span></code></pre></div><h2 id="可变个数的形参">可变个数的形参</h2>
+<blockquote>
+<p>JavaSE 5.0中提供了Varargs(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可以变的实参。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#75715e">// JDK 5.0以前：采用数组形参来定义方法，传入多个同一类型的变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> String<span style="color:#f92672">[]</span> books<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// JDK 5.0：采用可变个数形参来定义方法，传入多个同一类型变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> String<span style="color:#f92672">...</span><span style="color:#a6e22e">books</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><ul>
+<li>声明格式：方法名(参数的类型名&hellip;参数名)</li>
+<li>可变参数：方法参数部分指定类型的参数个数是可变多个：0个，1个或多个</li>
+<li>可变个数形参的方法和同名的方法之间，彼此构成重载</li>
+<li>可变参数方法的使用与方法参数部分使用数组是一致的</li>
+<li><strong>方法的参数部分有可变形参，需要放在形参声明的最后</strong></li>
+<li>在一个方法的形参位置，最多只能声明一个可变个数形参</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  DemoTest test <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DemoTest<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>  test<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>12<span style="color:#f92672">);</span> <span style="color:#75715e">// show(int i)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  test<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// show(String s)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  test<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// show(String ... s)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  test<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span> <span style="color:#75715e">// show(String ... s)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  test<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;AA&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;BB&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;CC&#34;</span><span style="color:#f92672">});</span> <span style="color:#75715e">// show(String ... s)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;show(int i)&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;show(String s)&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span>String <span style="color:#f92672">...</span> s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;show(String ... s)&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="方法参数的值传递机制">方法参数的值传递机制</h2>
+<p><strong>Java的实参值如何传入方法呢？</strong></p>
+<ul>
+<li>Java里方法的参数传递方式只有一种：值传递。即将实际参数值的副本(复制品)传入方法内，而参数本身不受影响。
+<ul>
+<li>形参是基本数据类型：将实参基本数据类型变量的“数据值”传递给形参</li>
+<li>形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span> <span style="color:#75715e">//地址值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> arr1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;b&#39;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;c&#39;</span><span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// println()方法被重载，所以输出的不是地址值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>arr1<span style="color:#f92672">);</span> <span style="color:#75715e">//abc
+</span></span></span></code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1292,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1305,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1256,6 +1357,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1271,6 +1373,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1720,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/3%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/" title="3、类的成员之一：属性"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" title="5、面向对象特征之一：封装性" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1763,4 @@
 </script>
   </body>
 </html>
+

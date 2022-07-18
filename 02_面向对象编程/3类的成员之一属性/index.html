@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>3、类的成员之一：属性 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/3%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -392,7 +392,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/3%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/" title="3、类的成员之一：属性" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/3%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/" title="3、类的成员之一：属性" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/3%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">
         3、类的成员之一：属性
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,18 @@
                   <span class="links">
                  
                  
-                   Categories
+                   3、类的成员之一：属性
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#属性成员变量-vs-局部变量">属性(成员变量) VS 局部变量</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1000,39 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              3、类的成员之一：属性
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="属性成员变量-vs-局部变量">属性(成员变量) VS 局部变量</h2>
 <ul>
-	
+<li>相同点
+<ul>
+<li>定义变量的格式：数据类型 变量名 = 变量值</li>
+<li>先声明，后使用</li>
+<li>变量都有其对应的作用域</li>
+</ul>
+</li>
+<li>不同点
+<ul>
+<li>在类中声明的位置不同。属性直接定义在类的一对<code>{}</code>内；局部变量声明在方法内、方法形参、代码块内、构造器形参、构造器内部的变量</li>
+<li>关于权限修饰符的不同。属性可以在声明属性时，指明其权限，使用权限修饰符。常用的权限修饰符：private、public、缺省、protected。局部变量不可以使用权限修饰符。</li>
+<li>默认初始化值的情况
+<ul>
+<li>属性：类的属性，根据其类型，都有默认初始化值。整型(byte、short、int、long)：0；浮点型(float、double)：0.0；字符型(char)：0(或&rsquo;\u0000&rsquo;)；布尔型(boolean)：false；引用数据类型(类、数组、接口)：null</li>
+<li>局部变量：没有默认初始值。意味着，我们在调用局部变量之前，一定要显式赋值。特别地，形参在调用时，我们赋值即可。</li>
+</ul>
+</li>
+<li>在内存中加载的位置：属性加载在堆空间中(非static)；局部变量加载在栈空间</li>
+</ul>
+</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1214,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1227,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1240,6 +1263,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1255,6 +1279,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1642,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/2java%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/" title="2、Java语言基本元素：类和对象"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/" title="4、类的成员之二：方法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1685,4 @@
 </script>
   </body>
 </html>
+

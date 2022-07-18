@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>6、程序流程控制 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -118,7 +118,7 @@
   
     
     <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" class="dd-item
-        
+        parent
         
         
         ">
@@ -251,7 +251,7 @@
  
   
     
-      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="6、程序流程控制" class="dd-item ">
+      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" title="6、程序流程控制" class="dd-item active">
         <a href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
         6、程序流程控制
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,31 @@
                   <span class="links">
                  
                  
-                   Categories
+                   6、程序流程控制
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#分支结构">分支结构</a>
+      <ul>
+        <li><a href="#if-else结构">if-else结构</a></li>
+        <li><a href="#switch-case结构">switch-case结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#循环结构">循环结构</a>
+      <ul>
+        <li><a href="#for循环结构">for循环结构</a></li>
+        <li><a href="#while循环结构">while循环结构</a></li>
+        <li><a href="#do-while循环结构">do-while循环结构</a></li>
+      </ul>
+    </li>
+    <li><a href="#特殊关键字的使用">特殊关键字的使用</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1013,154 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              6、程序流程控制
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>程序控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。</li>
+<li>其流程控制方式采用结构化程序设计中规定的三种基本流程结果，即：顺序结构、分支结构、循环结构</li>
+</ul>
+<h2 id="分支结构">分支结构</h2>
+<h3 id="if-else结构">if-else结构</h3>
+<ul>
+<li>else 结构是可选的</li>
+<li>针对与条件表达式：
+<ul>
+<li>如果多个条件表达式之间是“互斥”关系（或没有交集的关系），哪个判断和执行语句声明在上面还是下面，无所谓。</li>
+<li>如果多个条件表达式之间有交集的关系，需要根据实际情况，考虑清楚应该将哪个结构声明在上面。</li>
+<li>如果多个条件表达式之间有包含关系，通常情况下，需要将范围小的声明在范围大的上面。否则，范围小的就没有机会执行</li>
+</ul>
+</li>
+<li>if-else 结构是可以互相嵌套的。</li>
+<li>如果if-else结构中的执行语句只有一行时，对应的一对{}可以省略的。但是，不建议大家省略。</li>
+<li>多个if-else时，if-else的配对方式采用就近原则进行配对</li>
+</ul>
+<h3 id="switch-case结构">switch-case结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>表达式<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> 常量1<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    语句1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// break;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">case</span> 常量2<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    语句2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// break;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">...</span> <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> 常量N<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    语句N<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// break;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    语句<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// break;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>根据switch表达式中的值，依次匹配各个case中的常量。一旦匹配成功，则进入相应的case结构中，调用其执行语句。当调用完执行语句以后，则仍然继续向下执行其他case结构中的执行语句，直到遇到break关键字或此switch-case结构末尾结束为止。</li>
+<li>break，可以使用在switch-case结构中，表示一旦执行到此关键字，就跳出switch-case结构</li>
+<li>switch结构中的表达式，只能是如下的6种数据类型之一：byte、short、char、int、枚举类型（JDK5.0新增）、String类型（JDK7.0新增）</li>
+<li>case 之后只能声明常量，不能声明范围。</li>
+<li>break 关键字是可选的</li>
+<li>default：相当于if-else结构中的else。default结构是可选的，而且位置是灵活的。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Console: zero
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>number<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;other&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> 0<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;zero&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;one&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>凡是可以使用switch-case的结构，都可以转换为if-else。反之，不成立。</li>
+<li>当发现既可以使用switch-case且switch中表达式的取值情况不太多，又可以使用if-else时，我们优先选择使用switch-case。原因：switch-case执行效率稍高。</li>
+</ul>
+<h2 id="循环结构">循环结构</h2>
+<p>循环语句的四个组成部分</p>
+<ul>
+<li>初始化部分</li>
+<li>循环条件部分</li>
+<li>循环体部分</li>
+<li>迭代部分</li>
+</ul>
+<h3 id="for循环结构">for循环结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>初始化部分<span style="color:#f92672">;</span>循环条件部分<span style="color:#f92672">;</span>迭代部分<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  循环体部分
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>执行过程<span style="color:#960050;background-color:#1e0010">：</span>初始化部分<span style="color:#f92672">-</span>循环条件部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span>循环条件部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span> <span style="color:#f92672">...</span> <span style="color:#f92672">-</span> 循环条件部分
+</span></span></code></pre></div><h3 id="while循环结构">while循环结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>初始化部分
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">while</span><span style="color:#f92672">(</span>循环条件部分<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  循环体部分
+</span></span><span style="display:flex;"><span>  迭代部分
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>执行过程<span style="color:#960050;background-color:#1e0010">：</span>初始化部分<span style="color:#f92672">-</span>循环条件部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span>循环条件部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span> <span style="color:#f92672">...</span> <span style="color:#f92672">-</span> 循环条件部分
+</span></span></code></pre></div><ul>
+<li>写while循环千万小心不要丢了迭代条件。一旦丢了，就可能导致死循环！</li>
+<li>写程序需要避免出现死循环。</li>
+<li>for循环和while循环是可以相互转换的。区别在于for循环和while循环的初始化条件部分的作用范围不同。</li>
+</ul>
+<h3 id="do-while循环结构">do-while循环结构</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>初始化部分
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  循环体部分
+</span></span><span style="display:flex;"><span>  迭代部分
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span><span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>循环条件部分<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>执行过程<span style="color:#960050;background-color:#1e0010">：</span>初始化部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span>循环条件部分<span style="color:#f92672">-</span>循环体部分<span style="color:#f92672">-</span>迭代部分<span style="color:#f92672">-</span> <span style="color:#f92672">...</span> <span style="color:#f92672">-</span> 循环条件部分
+</span></span></code></pre></div><ul>
+<li>do-while循环至少会执行一次循环体！</li>
+<li>开发中，使用for和while更多一些。较少使用do-while</li>
+</ul>
+<h2 id="特殊关键字的使用">特殊关键字的使用</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">适用范围</th>
+<th style="text-align:center">不同点</th>
+<th style="text-align:center">相同点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">break</td>
+<td style="text-align:center">switch-case和循环结构中</td>
+<td style="text-align:center">结束当前循环</td>
+<td style="text-align:center">关键字后面不能声明执行语句</td>
+</tr>
+<tr>
+<td style="text-align:center">continue</td>
+<td style="text-align:center">循环结构中</td>
+<td style="text-align:center">结束当次循环</td>
+<td style="text-align:center">关键字后面不能声明执行语句</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>label: <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> 4<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> 10<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">%</span> 4 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">//break; //默认跳出包裹此关键字最近的一层循环
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>              <span style="color:#75715e">//continue;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>              
+</span></span><span style="display:flex;"><span>              <span style="color:#75715e">//break label; //结束指定标识的一层循环结构
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>              <span style="color:#66d9ef">continue</span> label<span style="color:#f92672">;</span> <span style="color:#75715e">//结束指定标识的一层循环结构当次循环
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li>return：并非专门用于结束循环的，它的功能是结束一个方法。当一个方法执行到一个return语句时，这个方法将被结束。</li>
+<li>与break和continue不同的是，return直接结束整个方法，不管这个return处于多少层循环之内</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1048,8 +1195,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1208,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1144,6 +1292,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1159,6 +1308,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1767,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/5%E8%BF%90%E7%AE%97%E7%AC%A6/" title="5、运算符"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/7%E6%95%B0%E7%BB%84/" title="7、数组" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1810,4 @@
 </script>
   </body>
 </html>
+

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>12、关键字：super :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/12%E5%85%B3%E9%94%AE%E5%AD%97super/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -581,7 +581,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/12%E5%85%B3%E9%94%AE%E5%AD%97super/" title="12、关键字：super" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/12%E5%85%B3%E9%94%AE%E5%AD%97super/" title="12、关键字：super" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/12%E5%85%B3%E9%94%AE%E5%AD%97super/">
         12、关键字：super
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,18 @@
                   <span class="links">
                  
                  
-                   Categories
+                   12、关键字：super
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#子类对象实例化的全过程">子类对象实例化的全过程</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1000,50 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              12、关键字：super
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>super可以用来调用：属性、方法、构造器</li>
+<li>super的使用
+<ul>
+<li>我们可以在子类的方法或构造器中。通过使用&quot;super.属性&quot;或&quot;super.方法&quot;的方式，显式的调用父类中声明的属性或方法。但是，通常情况下，我们习惯省略&quot;super.&quot;</li>
+<li>特殊情况：当子类和父类中定义了同名的属性时，我们要想要在子类中调用父类中声明的属性，则必须显式的使用&quot;super.属性&quot;的方式，表明调用的是父类中声明的属性，否则默认是调用子类的属性。</li>
+<li>特殊情况：当子类重写了父类中的方法以后，我们想在子类中的方法中调用父类中被重写的方法时，则必须显式使用&quot;super.方法&quot;的方式，表明调用的是父类中被重写的方法，否则默认是调用子类的方法。</li>
+</ul>
+</li>
+<li>super调用构造器
+<ul>
+<li>我们可以在子类的构造器中显式的使用&quot;super(形参列表)&ldquo;的方式，调用父类中声明的指定的构造器</li>
+<li>&ldquo;super(形参列表)&ldquo;的使用，必须声明在子类构造器的首行</li>
+<li>我们在类的构造器中，针对于&quot;this(形参列表)&ldquo;或&quot;super(形参列表)&ldquo;只能二选一，不能同时出现</li>
+<li>在构造器的首行，没有显示的声明&quot;this(形参列表)&ldquo;或&quot;super(形参列表)&quot;，则默认调用的是父类中的空参的构造器</li>
+<li>在类的多个构造器中，至少有一个类的构造器中使用了&quot;super(形参列表)&quot;，调用父类中的构造器</li>
+</ul>
+</li>
+</ul>
+<h2 id="子类对象实例化的全过程">子类对象实例化的全过程</h2>
+<ul>
+<li>从结果上来看：（继承性）
+<ul>
+<li>子类继承父类以后，就获取了父类中声明的属性或方法。</li>
+<li>创建子类的对象，在堆空间中，就会加载所有父类中声明的属性</li>
+</ul>
+</li>
+<li>从过程上来看：
+<ul>
+<li>当我们通过父类的构造器创建子类对象时，我们一定会直接或间接的调用其父类的构造器，进而调用父类的父类的构造器，直到调用了java.lang.Object类中空参的构造器为止。正因为加载过所有的父类的结构，所以才可以看到内存中有父类中的结构，子类对象才可以考虑进行调用。</li>
+</ul>
+</li>
+<li>明确：虽然创建子类对象时，调用了父类的构造器，但是自始至终就创建过一个对象，即为new的子类对象。</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1225,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1238,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1384,6 +1418,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1399,6 +1434,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1653,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/11%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%BA%8C%E7%BB%A7%E6%89%BF%E6%80%A7/" title="11、面向对象特征之二：继承性"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/" title="13、面向对象特征之三：多态性" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1696,4 @@
 </script>
   </body>
 </html>
+

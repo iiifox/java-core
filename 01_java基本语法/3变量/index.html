@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>3、变量 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -34,9 +34,24 @@
       
     </style>
     
-	
+	<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -118,7 +133,7 @@
   
     
     <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" class="dd-item
-        
+        parent
         
         
         ">
@@ -188,7 +203,7 @@
  
   
     
-      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/" title="3、变量" class="dd-item ">
+      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/" title="3、变量" class="dd-item active">
         <a href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/">
         3、变量
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +988,28 @@
                   <span class="links">
                  
                  
-                   Categories
+                   3、变量
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#变量的概念">变量的概念</a></li>
+    <li><a href="#变量的作用">变量的作用</a></li>
+    <li><a href="#使用变量注意">使用变量注意</a></li>
+    <li><a href="#变量的分类">变量的分类</a></li>
+    <li><a href="#整数变量byteshortintlong">整数变量：byte、short、int、long</a></li>
+    <li><a href="#浮点类型floatdouble">浮点类型：float、double</a></li>
+    <li><a href="#字符类型char">字符类型：char</a></li>
+    <li><a href="#布尔型boolean">布尔型：boolean</a></li>
+    <li><a href="#基本数据类型转换">基本数据类型转换</a></li>
+    <li><a href="#强制类型转换">强制类型转换</a></li>
+    <li><a href="#字符串类型string">字符串类型：String</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1025,227 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              3、变量
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="变量的概念">变量的概念</h2>
 <ul>
-	
+<li>内存中的一个存储区域</li>
+<li>该区域的数据可以在同一类型范围内不断变化</li>
+<li>变量是程序中最基本的存储单元，包含<strong>变量类型</strong>、<strong>变量名</strong>、<strong>存储的值</strong></li>
 </ul>
+<h2 id="变量的作用">变量的作用</h2>
+<ul>
+<li>用于在内存中保存数据</li>
+</ul>
+<h2 id="使用变量注意">使用变量注意</h2>
+<ul>
+<li><strong>Java 中每个变量必须先声明，后使用</strong></li>
+<li>使用变量名来访问这块区域的数据</li>
+<li>变量的作用域：其定义所在的一对<code>{}</code>内</li>
+<li>变量只有在其作用域内才有效</li>
+<li>同一个作用域内，不能定义重名的变量</li>
+</ul>
+<h2 id="变量的分类">变量的分类</h2>
+<p><strong>按数据类型分类</strong></p>
+<ul>
+<li>基本数据类型
+<ul>
+<li>数值型
+<ul>
+<li>整数类型 <strong>(byte short int long)</strong></li>
+<li>浮点类型 <strong>(float double)</strong></li>
+</ul>
+</li>
+<li>字符型 <strong>(char)</strong></li>
+<li>布尔型 <strong>(boolean)</strong></li>
+</ul>
+</li>
+<li>引用数据类型
+<ul>
+<li>类 <strong>(class)</strong></li>
+<li>接口 <strong>(interface)</strong></li>
+<li>数组 <code>([])</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>按声明位置分类</strong></p>
+<ul>
+<li>成员变量
+<ul>
+<li>实例变量 <strong>(不以 static 修饰)</strong></li>
+<li>类变量 <strong>(以 static 修饰)</strong></li>
+</ul>
+</li>
+<li>局部变量
+<ul>
+<li>形参 <strong>(方法、构造器中定义的变量)</strong></li>
+<li>方法局部变量 <strong>(在方法内部定义)</strong></li>
+<li>代码块局部变量 <strong>(在代码块内定义)</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="整数变量byteshortintlong">整数变量：byte、short、int、long</h2>
+<ul>
+<li>Java 各整数类型有固定的表数范围和字段长度，不受具体 OS 的影响，以保证 Java 程序的可移植性。</li>
+<li>Java 的整型常量默认为 int 型，声明 long 型常量须加<code>l</code>或者<code>L</code></li>
+<li>Java 程序中变量通常声明为 int 型，除非不足以表示较大的数，才使用 long</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">占用存储空间</th>
+<th style="text-align:center">表数范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">1字节=8bit位</td>
+<td style="text-align:center">-128~127</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">2字节</td>
+<td style="text-align:center">-32768~32767</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">4字节</td>
+<td style="text-align:center">-2147483648~2147483647(约21亿)</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">8字节</td>
+<td style="text-align:center">$-2^{63}$ ~ $2^{63}-1$</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>bit：计算机中的最小存储单位。byte：计算机中基本存储单元。</p>
+</blockquote>
+<h2 id="浮点类型floatdouble">浮点类型：float、double</h2>
+<ul>
+<li>与整数类型类似，Java 浮点类型也有固定的表数范围和字段长度，不受具体操作系统的影响</li>
+<li>浮点型常量有两种表示形式：
+<ul>
+<li>十进制数形式</li>
+<li>科学计数法形式</li>
+</ul>
+</li>
+<li>float：单精度，尾数可以精确到7位有效数字。很多情况下，精度很难满足需求。</li>
+<li>double：双精度，精度是 float 的两倍。通常采用此类型。</li>
+<li>Java 的浮点型常量默认是 double 型，声明 float 型常量，须后加<code>f</code>或<code>F</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">占用存储空间</th>
+<th style="text-align:center">表数范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">4字节</td>
+<td style="text-align:center">-3.403E38~3.403E38</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">8字节</td>
+<td style="text-align:center">-1.798E308~1.798E308</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意点：float 表示数值的范围比 long 还大</p>
+</blockquote>
+<h2 id="字符类型char">字符类型：char</h2>
+<ul>
+<li>char 型数据用来表示通常意义上“字符”（2字节）</li>
+<li>Java 中所有字符都使用 Unicode 编码，故一个字符可以存储一个字母，一个汉字，或其他书面语的一个字符。</li>
+<li>字符型变量的三种表现形式：
+<ul>
+<li>字符常量是用单引号<code>''</code>括起来的单个字符。</li>
+<li>Java 中 还允许使用转义字符<code>'\'</code>来将其后的字符转变为特殊字符型常量。</li>
+<li>直接使用 Unicode 值来表示字符型常量。</li>
+</ul>
+</li>
+<li>char 类型是可以进行运算的。因为它都对应有 Unicode 编码值。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> c1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 编译通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// char c2 = &#39;AB&#39;; // 编译不通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> c3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;中&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 编译通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> c4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 编译通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> c5 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\u0043&#39;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 编译通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// char c6 = &#39;&#39;; // 编译不通过
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> c7 <span style="color:#f92672">=</span> 97<span style="color:#f92672">;</span> <span style="color:#75715e">// a, 开发中极其少见
+</span></span></span></code></pre></div><blockquote>
+<p>常用ASCII码值： &lsquo;a&rsquo; == 97; &lsquo;A&rsquo; == 65;</p>
+</blockquote>
+<h2 id="布尔型boolean">布尔型：boolean</h2>
+<ul>
+<li>只能取两个值之一：true、false</li>
+<li>常常在条件判断、循环结构中使用</li>
+</ul>
+<h2 id="基本数据类型转换">基本数据类型转换</h2>
+<ul>
+<li>自动类型转换：容量小的类型自动转换为容量大的数据类型。数据类型按容量大小排序为：<code>char、byte、short --&gt; int --&gt; long --&gt; float --&gt; double</code></li>
+<li>有多种类型的数据混合运算时，系统首先自动将所有数据类型转换为容量最大的那种数据类型，然后再进行计算</li>
+<li>byte,short,char之间不会互相转换，他们三者在计算时首先转换为 int 类型</li>
+</ul>
+<blockquote>
+<p>Java 在做运算的时候，如果操作数均在 int 范围内，那么一律在 int 的空间内运算。</p>
+</blockquote>
+<ul>
+<li>boolean 类型不能与其它数据类型运算</li>
+<li>当把任何基本数据类型的值和字符串(String)进行连接运算时(+)，基本数据类型的值将自动转化为字符串(String)类型</li>
+</ul>
+<blockquote>
+<p>说明：此时的容量大小指的是表示数的范围的大小。比如：float 容量要大于 long 的容量</p>
+</blockquote>
+<h2 id="强制类型转换">强制类型转换</h2>
+<ul>
+<li>自动类型转换的逆过程，将容量大的数据类型转换为容量小的数据类型。使用时要加上强制转换符：<code>(数据类型)</code>，但可能造成<strong>精度降低或溢出</strong>，格外要注意</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">double</span> d1 <span style="color:#f92672">=</span> 12<span style="color:#f92672">.</span><span style="color:#a6e22e">9</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i1 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span>d1<span style="color:#f92672">;</span> <span style="color:#75715e">// 12，截断操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i2 <span style="color:#f92672">=</span> 128<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> b <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">)</span>i2<span style="color:#f92672">;</span> <span style="color:#75715e">// -128
+</span></span></span></code></pre></div><ul>
+<li>通常，字符串不能直接转换为基本类型，但通过基本类型对应的包装类则可以实现把字符串转换为基本类型</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>String a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;43&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span>
+</span></span></code></pre></div><ul>
+<li>boolean 类型不可以转换为其它的数据类型</li>
+</ul>
+<blockquote>
+<p>说明：整型常量，默认类型是 int 型；浮点型常量，默认类型是 double 型。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> b <span style="color:#f92672">=</span> 12<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// byte b1 = b + 1; // 编译失败
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// float f1 = b + 12.3; // 编译失败
+</span></span></span></code></pre></div><h2 id="字符串类型string">字符串类型：String</h2>
+<ul>
+<li>String 不是基本数据类型，属于引用数据类型</li>
+<li>使用方式与基本数据类型一致。</li>
+<li>一个字符串可以串接另一个字符串，也可以直接串接其他类型的数据。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcd&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str <span style="color:#f92672">=</span> str <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;xyz&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>str <span style="color:#f92672">=</span> str <span style="color:#f92672">+</span> n<span style="color:#f92672">;</span> <span style="color:#75715e">// abcdxyz100
+</span></span></span></code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1048,8 +1280,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1293,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1096,6 +1329,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1111,6 +1345,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1852,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/" title="2、标识符"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/" title="4、进制" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1895,4 @@
 </script>
   </body>
 </html>
+

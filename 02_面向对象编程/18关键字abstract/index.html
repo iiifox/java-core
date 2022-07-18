@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>18、关键字：abstract :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/18%E5%85%B3%E9%94%AE%E5%AD%97abstract/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -707,7 +707,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/18%E5%85%B3%E9%94%AE%E5%AD%97abstract/" title="18、关键字：abstract" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/18%E5%85%B3%E9%94%AE%E5%AD%97abstract/" title="18、关键字：abstract" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/18%E5%85%B3%E9%94%AE%E5%AD%97abstract/">
         18、关键字：abstract
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,18 @@
                   <span class="links">
                  
                  
-                   Categories
+                   18、关键字：abstract
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#匿名对象">匿名对象</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1000,59 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              18、关键字：abstract
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>abstract可以用来修饰的结构：类、方法</li>
+<li>abstract修饰类：抽象类
+<ul>
+<li>此类不能实例化</li>
+<li>抽象类中一定要有构造器，便于子类实例化时调用(涉及：子类对象实例化的全过程)</li>
+<li>开发中，都会提供抽象类的子类，让子类对象实例化，完成相关的操作</li>
 </ul>
+</li>
+<li>abstract修饰方法：抽象方法
+<ul>
+<li>抽象方法只要方法的声明，没有方法体</li>
+<li>包含抽象方法的类，一定是一个抽象类。反之，抽象类中可以没有抽象方法的。</li>
+<li>若子类重写了父类中的所有抽象方法后，此子类才可以实例化；若子类没有重写父类中的所有的抽象方法，则此子类也是一个抽象类，需要使用abstract修饰</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意点：abstract不能用来修饰：属性、构造器等结构；abstract不能用来修饰私有方法、静态方法、final的方法、final的类</p>
+</blockquote>
+<h2 id="匿名对象">匿名对象</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>method<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Student<span style="color:#f92672">());</span> <span style="color:#75715e">//匿名对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Worker worker <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Worker<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>method1<span style="color:#f92672">(</span>worker<span style="color:#f92672">);</span> <span style="color:#75715e">//非匿名的类非匿名的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>method1<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Worker<span style="color:#f92672">());</span> <span style="color:#75715e">//非匿名的类匿名的对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 创建匿名子类的非匿名对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Person p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;吃东西&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 创建匿名子类的匿名对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>method1<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Person<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">eat</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;吃东西&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">});</span>
+</span></span></code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1234,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1247,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1480,6 +1523,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1495,6 +1539,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1662,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/17%E5%85%B3%E9%94%AE%E5%AD%97final/" title="17、关键字：final"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/19%E5%85%B3%E9%94%AE%E5%AD%97interface/" title="19、关键字：interface" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1705,4 @@
 </script>
   </body>
 </html>
+

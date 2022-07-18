@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>1、异常体系结构 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -778,7 +778,7 @@
   
     
     <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="dd-item
-        
+        parent
         
         
         ">
@@ -806,7 +806,7 @@
  
   
     
-      <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="1、异常体系结构" class="dd-item ">
+      <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="1、异常体系结构" class="dd-item active">
         <a href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
         1、异常体系结构
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,14 @@
                   <span class="links">
                  
                  
-                   Categories
+                   1、异常体系结构
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -996,24 +996,47 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              1、异常体系结构
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>java.lang.Throwable
+<ul>
+<li>java.lang.Error：一般不编写针对性的代码进行处理</li>
+<li>java.lang.Exception：可以进行异常的处理
+<ul>
+<li>编译时异常(checked)
+<ul>
+<li>IOException
+<ul>
+<li>FileNotFoundException</li>
+</ul>
+</li>
+<li>ClassNotFoundException</li>
+</ul>
+</li>
+<li>运行时异常(unchecked)
+<ul>
+<li>NullPointerException</li>
+<li>ArrayIndexOutOfBoundsException</li>
+<li>ClassCastException</li>
+<li>NumberFormatException</li>
+<li>InputMismatchException</li>
+<li>ArithmeticException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1531,6 +1554,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1543,6 +1567,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1559,6 +1584,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1643,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/2%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%B8%80try-catch-finally/" title="2、异常处理的方式一：try Catch Finally" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1686,4 @@
 </script>
   </body>
 </html>
+

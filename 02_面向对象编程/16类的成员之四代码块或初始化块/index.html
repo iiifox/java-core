@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>16、类的成员之四：代码块（或初始化块） :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/16%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E5%9B%9B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%88%96%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -665,7 +665,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/16%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E5%9B%9B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%88%96%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/" title="16、类的成员之四：代码块（或初始化块）" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/16%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E5%9B%9B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%88%96%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/" title="16、类的成员之四：代码块（或初始化块）" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/16%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E5%9B%9B%E4%BB%A3%E7%A0%81%E5%9D%97%E6%88%96%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/">
         16、类的成员之四：代码块（或初始化块）
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,18 @@
                   <span class="links">
                  
                  
-                   Categories
+                   16、类的成员之四：代码块（或初始化块）
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#属性赋值的过程">属性赋值的过程</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1000,54 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              16、类的成员之四：代码块（或初始化块）
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>代码块的作用：用来初始化类、对象</li>
+<li>代码块如果有修饰的话，只能使用static</li>
+<li>分类：静态代码块 VS 非静态代码块</li>
+<li>静态代码块
+<ul>
+<li>内部可以有输出语句</li>
+<li>随着类的加载而执行，而且只执行一次</li>
+<li>作用：初始化类的信息</li>
+<li>如果一个类中定义了多个静态代码块，则按照声明的先后顺序执行</li>
+<li>静态代码块的执行要优先于非静态代码块的执行</li>
+<li>静态代码块内只能调用静态的属性、静态的方法，不能调用非静态的结构</li>
 </ul>
+</li>
+<li>非静态代码块
+<ul>
+<li>内部可以有输出语句</li>
+<li>随着对象的创建而执行</li>
+<li>每创建一个对象，就执行一次非静态代码块</li>
+<li>作用：可以在创建对象时，对对象的属性等进行初始化</li>
+<li>如果一个类中定义了多个非静态代码块，则按照声明的先后顺序执行</li>
+<li>非静态代码块内可以调用静态的属性、静态的方法，或非静态的属性、非静态的方法</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>总结：由父及子，静态先行</p>
+</blockquote>
+<h2 id="属性赋值的过程">属性赋值的过程</h2>
+<ul>
+<li>默认初始化</li>
+<li>显式初始化/在代码块中赋值</li>
+<li>构造器中初始化</li>
+<li>有了对象以后，可以通过&quot;对象.属性&quot;或&quot;对象.方法&quot;的方式，进行赋值</li>
+</ul>
+<blockquote>
+<p>显式初始化和在代码块中赋值的顺序先后取决于代码先后顺序</p>
+</blockquote>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1229,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1242,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1448,6 +1486,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1463,6 +1502,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1657,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/15%E5%85%B3%E9%94%AE%E5%AD%97static/" title="15、关键字：static"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/17%E5%85%B3%E9%94%AE%E5%AD%97final/" title="17、关键字：final" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1700,4 @@
 </script>
   </body>
 </html>
+

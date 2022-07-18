@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>3、异常处理的方式二：throws :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BA%8Cthrows/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -778,7 +778,7 @@
   
     
     <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="异常处理" class="dd-item
-        
+        parent
         
         
         ">
@@ -848,7 +848,7 @@
  
   
     
-      <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BA%8Cthrows/" title="3、异常处理的方式二：throws" class="dd-item ">
+      <li data-nav-id="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BA%8Cthrows/" title="3、异常处理的方式二：throws" class="dd-item active">
         <a href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/3%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%BA%8Cthrows/">
         3、异常处理的方式二：throws
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,14 @@
                   <span class="links">
                  
                  
-                   Categories
+                   3、异常处理的方式二：throws
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -996,24 +996,26 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              3、异常处理的方式二：throws
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>&ldquo;throws + 异常类型&quot;写在方法的声明处。指明此方法执行时，可能会抛出的异常类型。一旦当方法体执行时，出现异常，仍会在异常代码处生成一个异常类的对象，此对象满足throws后异常类型时，就会被抛出。异常代码后续的代码，就不再执行！</li>
+<li>try-catch-finally：真正的将异常给处理掉了；throws的方式只是将异常抛给了方法的调用者，并没有真正将异常处理掉。</li>
+<li>开发中如何选择使用try-catch-finally还是使用throws？
+<ul>
+<li>如果父类中被重写的方法没有throws方式处理异常，则子类重写的方法也不能使用throws，意味着如果子类重写的方法中有异常，必须使用try-catch-finally方式处理</li>
+<li>执行的方法a中，先后又调用了另外的几个方法，这几个方法是递进关系执行的。我们建议这几个方法使用throws的方式进行处理。而执行的方法a可以考虑是用try-catch-finally方式进行处理。</li>
+</ul>
+</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1531,6 +1533,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1543,6 +1546,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1576,6 +1582,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1591,6 +1598,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1625,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/2%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%9A%84%E6%96%B9%E5%BC%8F%E4%B8%80try-catch-finally/" title="2、异常处理的方式一：try Catch Finally"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/03_%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/4%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8%E7%B1%BB/" title="4、自定义异常类" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1668,4 @@
 </script>
   </body>
 </html>
+

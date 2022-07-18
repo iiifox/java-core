@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>2、标识符 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -118,7 +118,7 @@
   
     
     <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" class="dd-item
-        
+        parent
         
         
         ">
@@ -167,7 +167,7 @@
  
   
     
-      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/" title="2、标识符" class="dd-item ">
+      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/" title="2、标识符" class="dd-item active">
         <a href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/">
         2、标识符
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,20 @@
                   <span class="links">
                  
                  
-                   Categories
+                   2、标识符
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#标识符的定义">标识符的定义</a></li>
+    <li><a href="#定义合法标识符规则">定义合法标识符规则</a></li>
+    <li><a href="#java中的名称命名规范">Java中的名称命名规范</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1002,43 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              2、标识符
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="标识符的定义">标识符的定义</h2>
 <ul>
-	
+<li>Java 对各种变量、方法和类等要素命名时使用的字符序列称为标识符</li>
 </ul>
+<blockquote>
+<p>技巧：凡是自己可以起名字的地方都叫标识符</p>
+</blockquote>
+<h2 id="定义合法标识符规则">定义合法标识符规则</h2>
+<ul>
+<li>由26个英文字母大小写，0-9，_或$组成</li>
+<li>数字不可以开头</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字</li>
+<li>Java 中严格区分大小写，长度无限制</li>
+<li>标识符不能包含空格</li>
+</ul>
+<h2 id="java中的名称命名规范">Java中的名称命名规范</h2>
+<ul>
+<li>包名：多单词组成时所有字母都小写：<code>xxxyyyzzz</code></li>
+<li>类名、接口名：多单词组成时，所有单词的首字母大写：<code>XxxYyyZzz</code></li>
+<li>变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：<code>xxxYyyZzz</code></li>
+<li>常量名：所有字母都大写，多单词时每个单词用下划线连接：<code>XXX_YYY_ZZZ</code></li>
+</ul>
+<blockquote>
+<p>注意点：
+1、在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。
+2、Java 采用 Unicode 字符集，因此标识符也可以使用汉字声明，但是不建议使用。</p>
+</blockquote>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1048,8 +1073,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1086,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1080,6 +1106,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1095,6 +1122,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1645,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/1%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97/" title="1、关键字与保留字"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/" title="3、变量" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1688,4 @@
 </script>
   </body>
 </html>
+

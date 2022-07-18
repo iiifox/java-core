@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>4、进制 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -118,7 +118,7 @@
   
     
     <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" class="dd-item
-        
+        parent
         
         
         ">
@@ -209,7 +209,7 @@
  
   
     
-      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/" title="4、进制" class="dd-item ">
+      <li data-nav-id="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/" title="4、进制" class="dd-item active">
         <a href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/">
         4、进制
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,14 @@
                   <span class="links">
                  
                  
-                   Categories
+                   4、进制
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -996,24 +996,41 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              4、进制
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>所有数字在计算机底层都是以<strong>二进制</strong>形式存在。</li>
+<li>对于整数，有四种表示方式：
+<ul>
+<li>二进制(binary)：0,1，满2进1，以<code>0b</code>或<code>0B</code>开头</li>
+<li>十进制(decimal)：0-9，满10进1</li>
+<li>八进制(octal)：0-7，满8进1，以数字<code>0</code>开头表示</li>
+<li>十六进制(hex)：0-9及A-F，满16进1，以<code>0x</code>或<code>0X</code>开头表示。此处的A-F不区分大小写。</li>
+</ul>
+</li>
+<li>Java 整数常量默认是 int 类型，当用二进制定义整数时，其第 32 位(最高位)是符号位：当是 long 类型时，二进制默认占64位，第64位是符号位</li>
+<li>二进制的整数有如下三种形式：
+<ul>
+<li>原码：直接将一个数值换成二进制数。最高位是符号位</li>
+<li>负数的反码：是对原码按位取反，只有最高位(符号位)确认为1</li>
+<li>负数的补码：其反码加1</li>
+</ul>
+</li>
+<li>计算机以二进制 <strong>补码</strong> 的形式保持所有的整数
+<ul>
+<li>正数的原码、反码、补码都相同</li>
+<li>负数的补码是其反码+1</li>
+</ul>
+</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1048,8 +1065,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1063,6 +1078,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1112,6 +1130,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1127,6 +1146,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1637,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/" title="3、变量"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/5%E8%BF%90%E7%AE%97%E7%AC%A6/" title="5、运算符" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1680,4 @@
 </script>
   </body>
 </html>
+

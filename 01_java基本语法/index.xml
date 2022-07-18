@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java基本语法 on Java 核心技术</title>
+    <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+    <description>Recent content in Java基本语法 on Java 核心技术</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 18 Jul 2022 17:30:17 +0800</lastBuildDate><atom:link href="https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1、关键字与保留字</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/1%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97/</link>
+      <pubDate>Mon, 18 Jul 2022 16:52:42 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/1%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97/</guid>
+      <description>关键字的定义和特点 被 Java 语言赋予了特殊含义，用做专门用途的字符串（单词） 关键字中所有字母都为小写 保留字的定义 现有 Java 版本尚未使用，但以后版本可能会作为关键字使用。命名标识符时要避免使用这些保留字。 总结：48个关键字、2个保留字、3个字面值
+用于定义数据类型的关键字 class interface enum byte short int long float double char boolean void 用于定义流程控制的关键字 if else switch case default while do for break continue return 用于定义访问权限修饰符的关键字 private protected public 用于定义类，函数，变量修饰符的关键字 abstract final static synchronized 用于定义类与类之间关系的关键字 extends implements 用于定义建立实例及引用实例，判断实例的关键字 new this super instanceof 用于异常处理的关键字 try catch finally throw throws 用于包的关键字 package import 其他修饰符关键字 native strictfp transient volatile assert 保留字 goto const 用于定义数据类型值的字面值 true false null </description>
+    </item>
+    
+    <item>
+      <title>2、标识符</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/</link>
+      <pubDate>Mon, 18 Jul 2022 16:52:32 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/2%E6%A0%87%E8%AF%86%E7%AC%A6/</guid>
+      <description>标识符的定义 Java 对各种变量、方法和类等要素命名时使用的字符序列称为标识符 技巧：凡是自己可以起名字的地方都叫标识符
+定义合法标识符规则 由26个英文字母大小写，0-9，_或$组成 数字不可以开头 不可以使用关键字和保留字，但能包含关键字和保留字 Java 中严格区分大小写，长度无限制 标识符不能包含空格 Java中的名称命名规范 包名：多单词组成时所有字母都小写：xxxyyyzzz 类名、接口名：多单词组成时，所有单词的首字母大写：XxxYyyZzz 变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz 常量名：所有字母都大写，多单词时每个单词用下划线连接：XXX_YYY_ZZZ 注意点： 1、在起名字时，为了提高阅读性，要尽量有意义，“见名知意”。 2、Java 采用 Unicode 字符集，因此标识符也可以使用汉字声明，但是不建议使用。</description>
+    </item>
+    
+    <item>
+      <title>3、变量</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 18 Jul 2022 16:52:20 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/3%E5%8F%98%E9%87%8F/</guid>
+      <description>变量的概念 内存中的一个存储区域 该区域的数据可以在同一类型范围内不断变化 变量是程序中最基本的存储单元，包含变量类型、变量名、存储的值 变量的作用 用于在内存中保存数据 使用变量注意 Java 中每个变量必须先声明，后使用 使用变量名来访问这块区域的数据 变量的作用域：其定义所在的一对{}内 变量只有在其作用域内才有效 同一个作用域内，不能定义重名的变量 变量的分类 按数据类型分类
+基本数据类型 数值型 整数类型 (byte short int long) 浮点类型 (float double) 字符型 (char) 布尔型 (boolean) 引用数据类型 类 (class) 接口 (interface) 数组 ([]) 按声明位置分类
+成员变量 实例变量 (不以 static 修饰) 类变量 (以 static 修饰) 局部变量 形参 (方法、构造器中定义的变量) 方法局部变量 (在方法内部定义) 代码块局部变量 (在代码块内定义) 整数变量：byte、short、int、long Java 各整数类型有固定的表数范围和字段长度，不受具体 OS 的影响，以保证 Java 程序的可移植性。 Java 的整型常量默认为 int 型，声明 long 型常量须加l或者L Java 程序中变量通常声明为 int 型，除非不足以表示较大的数，才使用 long 类型 占用存储空间 表数范围 byte 1字节=8bit位 -128~127 short 2字节 -32768~32767 int 4字节 -2147483648~2147483647(约21亿) long 8字节 $-2^{63}$ ~ $2^{63}-1$ bit：计算机中的最小存储单位。byte：计算机中基本存储单元。</description>
+    </item>
+    
+    <item>
+      <title>4、进制</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/</link>
+      <pubDate>Mon, 18 Jul 2022 16:52:12 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/4%E8%BF%9B%E5%88%B6/</guid>
+      <description> 所有数字在计算机底层都是以二进制形式存在。 对于整数，有四种表示方式： 二进制(binary)：0,1，满2进1，以0b或0B开头 十进制(decimal)：0-9，满10进1 八进制(octal)：0-7，满8进1，以数字0开头表示 十六进制(hex)：0-9及A-F，满16进1，以0x或0X开头表示。此处的A-F不区分大小写。 Java 整数常量默认是 int 类型，当用二进制定义整数时，其第 32 位(最高位)是符号位：当是 long 类型时，二进制默认占64位，第64位是符号位 二进制的整数有如下三种形式： 原码：直接将一个数值换成二进制数。最高位是符号位 负数的反码：是对原码按位取反，只有最高位(符号位)确认为1 负数的补码：其反码加1 计算机以二进制 补码 的形式保持所有的整数 正数的原码、反码、补码都相同 负数的补码是其反码+1 </description>
+    </item>
+    
+    <item>
+      <title>5、运算符</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/5%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Mon, 18 Jul 2022 16:52:03 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/5%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>运算符是一种特殊的符号，用以表示数据的运算、赋值和比较等。
+算术运算符 赋值运算符 比较运算符（关系运算符） 逻辑运算符 位运算符 三元运算符 算术运算符 运算符 运算 范例 结果 + 正号 +3 3 - 负号 b=4; -b -4 + 加 5+5 10 - 减 6-4 2 * 乘 3*4 12 / 除 5/5 1 % 取模(取余) 7%5 2 ++ 自增(前)，先运算后取值 a=2;b=++a; a=3;b=3 ++ 自增(后)，先取值后运算 a=2;b=a++; a=3;b=2 &amp;ndash; 自减(前)，先运算后取值 a=2;b=&amp;ndash;a; a=1;b=1 &amp;ndash; 自减(后)，先取值后运算 a=2;b=a&amp;ndash;; a=1;b=2 + 字符串连接 &amp;ldquo;He&amp;rdquo;+&amp;ldquo;llo&amp;rdquo; &amp;ldquo;Hello&amp;rdquo; 疑难点1：%取余运算，结果的符号与被模数的符号相同
+int m1 = 12; int n1 = 5; System.</description>
+    </item>
+    
+    <item>
+      <title>6、程序流程控制</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Mon, 18 Jul 2022 16:51:40 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</guid>
+      <description>程序控制语句是用来控制程序中各语句执行顺序的语句，可以把语句组合成能完成一定功能的小逻辑模块。 其流程控制方式采用结构化程序设计中规定的三种基本流程结果，即：顺序结构、分支结构、循环结构 分支结构 if-else结构 else 结构是可选的 针对与条件表达式： 如果多个条件表达式之间是“互斥”关系（或没有交集的关系），哪个判断和执行语句声明在上面还是下面，无所谓。 如果多个条件表达式之间有交集的关系，需要根据实际情况，考虑清楚应该将哪个结构声明在上面。 如果多个条件表达式之间有包含关系，通常情况下，需要将范围小的声明在范围大的上面。否则，范围小的就没有机会执行 if-else 结构是可以互相嵌套的。 如果if-else结构中的执行语句只有一行时，对应的一对{}可以省略的。但是，不建议大家省略。 多个if-else时，if-else的配对方式采用就近原则进行配对 switch-case结构 switch(表达式){ case 常量1: 语句1; // break; case 常量2: 语句2; // break; ... ... case 常量N: 语句N; // break; default: 语句; // break; } 根据switch表达式中的值，依次匹配各个case中的常量。一旦匹配成功，则进入相应的case结构中，调用其执行语句。当调用完执行语句以后，则仍然继续向下执行其他case结构中的执行语句，直到遇到break关键字或此switch-case结构末尾结束为止。 break，可以使用在switch-case结构中，表示一旦执行到此关键字，就跳出switch-case结构 switch结构中的表达式，只能是如下的6种数据类型之一：byte、short、char、int、枚举类型（JDK5.0新增）、String类型（JDK7.0新增） case 之后只能声明常量，不能声明范围。 break 关键字是可选的 default：相当于if-else结构中的else。default结构是可选的，而且位置是灵活的。 int number = 0; // Console: zero switch(number) { default: System.out.println(&amp;#34;other&amp;#34;); case 0: System.out.println(&amp;#34;zero&amp;#34;); break; case 1: System.out.println(&amp;#34;one&amp;#34;); break; } 凡是可以使用switch-case的结构，都可以转换为if-else。反之，不成立。 当发现既可以使用switch-case且switch中表达式的取值情况不太多，又可以使用if-else时，我们优先选择使用switch-case。原因：switch-case执行效率稍高。 循环结构 循环语句的四个组成部分</description>
+    </item>
+    
+    <item>
+      <title>7、数组</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/7%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 18 Jul 2022 16:51:21 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/7%E6%95%B0%E7%BB%84/</guid>
+      <description> 数组(Array)，是多个相同类型数据按一定顺序排列的集合，并使用一个名字命名，并通过编号的方式对这些数据进行统一管理。 数组本身是引用数据类型，而数组中的元素可以是任何数据类型，包括基本数据类型和引用数据类型。 创建数组对象会在内存中开辟一整块连续的空间，而数组名中引用的是这块连续空间的首地址。 数组的长度一旦确定，就不能修改。 //1.一维数组的声明和初始化	int[] ids;//声明 //1.1静态初始化：数组的初始化和数组元素的赋值操作同时进行 ids = new int[]{1001,1002,1003,1004}; //1.2动态初始化：数组的初始化和数组元素的赋值操作分开进行 String[] names = new String[5]; 数组元素的默认初始化值
+数组元素是整型：0 数组元素是浮点型：0.0 数组元素是char型：0或者&amp;rsquo;\u0000&amp;rsquo;，而非&#39;0&#39; 数组元素是boolean型：false 数组元素是引用数据类型：null 对于二维数组的理解：我们可以看成是一维数组array1又作为另一个一维数组array2的元素而存在。其实，从数组底层的运行机制来看，其实没有多维数组。
+//一些错误的写法 //int[] ids; //ids = {1,2,2}; //编译错误 //一些正确但是不标准的写法 int[] arr1 = {1,2,2,3}; //类型推断 int[] arr2[] = new int[][]{{1,2,2},{4,5},{6,7,8}}; // 数组[]位置可以随意 int[] arr3[] = {{1,2,2},{4,5},{6,7,8}}; String[] strArray1[] = {{&amp;#34;222&amp;#34;, &amp;#34;2222&amp;#34;},{&amp;#34;111&amp;#34;, &amp;#34;3333&amp;#34;, &amp;#34;5555&amp;#34;}}; </description>
+    </item>
+    
+    <item>
+      <title>附加：Arrays工具类的使用</title>
+      <link>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E9%99%84%E5%8A%A0arrays%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 18 Jul 2022 16:50:45 +0800</pubDate>
+      
+      <guid>https://iiifox.github.io/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E9%99%84%E5%8A%A0arrays%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description> java.util.Arrays类即为操作数组的工具类，包含了用来操作数组的各种方法 方法 作用 boolean equals(int[] a,int[] b) 判断两个数组是否相等 String toString(int[] a) 输出数组信息 void fill(int[] a,int val) 将指定值填充到数组之中 void sort(int[] a) 对数组进行排序 int binarySearch(int[] a,int key) 对排列后的数组进行二分法检索指定的值 </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>5、面向对象特征之一：封装性 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -434,7 +434,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" title="5、面向对象特征之一：封装性" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" title="5、面向对象特征之一：封装性" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">
         5、面向对象特征之一：封装性
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,20 @@
                   <span class="links">
                  
                  
-                   Categories
+                   5、面向对象特征之一：封装性
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#四种访问权限修饰符">四种访问权限修饰符</a></li>
+    <li><a href="#什么是封装性">什么是封装性？</a></li>
+    <li><a href="#封装性的体现">封装性的体现</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1002,79 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              5、面向对象特征之一：封装性
             </h1>
           
 
         
 
 
-
-
-
+<h2 id="四种访问权限修饰符">四种访问权限修饰符</h2>
 <ul>
-	
+<li>Java权限修饰符public、protected、private置于类的成员定义前，用来限定对象对该类成员的访问权限</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">修饰符</th>
+<th style="text-align:center">类内部</th>
+<th style="text-align:center">同一个包</th>
+<th style="text-align:center">不同包的子类</th>
+<th style="text-align:center">同一个工程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">private</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">(缺省)</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">protected</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">public</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>对于class的权限修饰只可以用public和default(缺省)。</p>
+<ul>
+<li>public类可以在任意地方被访问。</li>
+<li>default类只可以被同一个包内部的类访问。</li>
+</ul>
+<h2 id="什么是封装性">什么是封装性？</h2>
+<ul>
+<li>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可拓展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出去。这就是封装性的设计思想。</li>
+</ul>
+<h2 id="封装性的体现">封装性的体现</h2>
+<ul>
+<li>Java规定的四种权限（从小到大排列）：private、缺省、protected、public</li>
+<li>4种权限可以修饰类及类的内部结构：属性、方法、构造器、内部类</li>
+<li>具体的，4中权限都可以用来修饰类的内部结构：属性、方法、构造器、内部类；修饰类的话，只能使用：缺省、public</li>
+</ul>
+<blockquote>
+<p>总结：Java提供了4种权限修饰符来修饰类及类的内部结构，体现类及类的内部结构在被调用时的可见性的大小</p>
+</blockquote>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1256,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1269,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1272,6 +1337,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1287,6 +1353,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1684,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/4%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/" title="4、类的成员之二：方法"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/6%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/" title="6、类的成员之三：构造器" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1727,4 @@
 </script>
   </body>
 </html>
+

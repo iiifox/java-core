@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/java-core/images/favicon.png" type="image/png">
 
-    <title>Categories :: Java 核心技术</title>
+    <title>13、面向对象特征之三：多态性 :: Java 核心技术</title>
 
     
     <link href="/java-core/css/nucleus.css?1658140812" rel="stylesheet">
@@ -36,7 +36,7 @@
     
 	
   </head>
-  <body class="" data-url="/java-core/categories/">
+  <body class="" data-url="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -322,7 +322,7 @@
   
     
     <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" title="面向对象编程" class="dd-item
-        
+        parent
         
         
         ">
@@ -602,7 +602,7 @@
  
   
     
-      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/" title="13、面向对象特征之三：多态性" class="dd-item ">
+      <li data-nav-id="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/" title="13、面向对象特征之三：多态性" class="dd-item active">
         <a href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E4%B9%8B%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/">
         13、面向对象特征之三：多态性
         <i class="fas fa-check read-icon"></i>
@@ -973,14 +973,21 @@
                   <span class="links">
                  
                  
-                   Categories
+                   13、面向对象特征之三：多态性
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#区分方法的重载与重写">区分方法的重载与重写</a></li>
+    <li><a href="#instanceof-操作符">instanceof 操作符</a></li>
+    <li><a href="#和equals的区别">==和equals的区别</a></li>
+    <li><a href="#java中的junit单元测试">Java中的JUnit单元测试</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -996,24 +1003,79 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              13、面向对象特征之三：多态性
             </h1>
           
 
         
 
 
-
-
-
 <ul>
-	
+<li>理解多态性：可以理解为一个事物的多种形态。</li>
+<li>何为多态性：
+<ul>
+<li>对象的多态性：父类的引用指向子类的对象（或子类的对象赋给父类的引用）</li>
+</ul>
+</li>
+<li>多态的使用，虚拟方法调用
+<ul>
+<li>有了对象的多态性以后，我们在编译期，只能调用父类中声明的方法，但在运行期，我们实际执行的是子类重写父类的方法。</li>
+<li>总结：编译，看左边；运行，看右边。</li>
+</ul>
+</li>
+<li>多态性的使用前提：
+<ul>
+<li>类的继承关系</li>
+<li>方法的重写</li>
+</ul>
+</li>
+<li>对象的多态性，只适用于方法，不适用于属性（编译和运行都看左边）</li>
+</ul>
+<h2 id="区分方法的重载与重写">区分方法的重载与重写</h2>
+<ul>
+<li>二者定义的不同：
+<ul>
+<li>重载：在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。</li>
+<li>重写：子类继承父类以后，可以对父类中同名同参数的方法，进行覆盖操作</li>
+</ul>
+</li>
+<li>从编译和运行的角度看：
+<ul>
+<li>重载，是指允许存在多个同名方法，而这些方法的参数不同。编译器根据方法不同的参数表，对同名方法的名称做修饰。对于编译器而言，这些同名方法就成了不同的方法。它们的调用地址在编译期就绑定了。Java的重载是可以包括父类和子类的，即子类可以重载父类的同名不同参数的方法。</li>
+<li>所以：对于重载而言，在方法调用之前，编译期就已经确定了所要调用的方法，这称为“早绑定”或“静态绑定”</li>
+<li>而对于多态，只有等到方法调用的那一刻，解释器运行器才会确定所要调用的具体方法，这称为“晚绑定”或“动态绑定”。</li>
+</ul>
+</li>
+</ul>
+<h2 id="instanceof-操作符">instanceof 操作符</h2>
+<ul>
+<li>instanceof 关键字的使用：a instanceof A：判断对象a是否是类A的实例。如果是，返回true；如果不是，返回false</li>
+<li>使用情境： 为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，就不进行向下转型。</li>
+<li>如果类B是类A的父类，且a instanceof A返回true，则a instanceof B也返回true</li>
+</ul>
+<h2 id="和equals的区别">==和equals的区别</h2>
+<ul>
+<li>==既可以比较基本类型也可以比较引用类型。对于基本类型就是比较值，对于引用类型就是比较内存地址</li>
+<li>equals的话，它是属于java.lang.Object类里面的方法，如果该方法没有被重写过默认也是==；我们可以看到String等类的equals方法是被重写过的，而且String类在日常开发中用的比较多，久而久之，形成了equals是比较值的错误观点</li>
+<li>具体要看自定义类里有没有重写Object的equals方法来判断</li>
+<li>通常情况下，重写equals方法，会比较类中的相应属性是否都相等</li>
+</ul>
+<h2 id="java中的junit单元测试">Java中的JUnit单元测试</h2>
+<ul>
+<li>创建Java类，进行单元测试。此时的Java类要求：
+<ul>
+<li>此类是public的</li>
+<li>此类提供公共的无参的构造器</li>
+</ul>
+</li>
+<li>此类中声明单元测试方法。此时的单元测试方法的权限是public，没有返回值，没有形参</li>
+<li>此单元测试方法上需要声明注解：@Test</li>
+<li>写完代码后，左键双击单元测试方法名，右键：run as - JUnit Test</li>
+<li>说明：如果执行结果没有任何异常：绿条；如果执行结果出现异常：红条</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1195,6 +1257,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1207,6 +1270,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1400,6 +1466,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1415,6 +1482,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1615,8 +1685,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/12%E5%85%B3%E9%94%AE%E5%AD%97super/" title="12、关键字：super"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/java-core/01_java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Java基本语法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/java-core/02_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/14%E5%8C%85%E8%A3%85%E7%B1%BBwrapper%E7%9A%84%E4%BD%BF%E7%94%A8/" title="14、包装类（Wrapper）的使用" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1656,3 +1728,4 @@
 </script>
   </body>
 </html>
+
